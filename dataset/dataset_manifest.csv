@@ -1,0 +1,17 @@
+Commodity_ID,Commodity_Name,Food_Group,Primary_Adulterants_Screened,Model_Readiness_Status,Target_Train_Samples,Target_Val_Samples,Target_Test_Samples
+milk,Milk,OTHER_FOODS,"Detergent; Urea; Starch; Water Dilution",ACTIVE_EDGE_DEPLOYED,500,100,100
+honey,Honey,OTHER_FOODS,"Corn Syrup (HFCS); Invert Sugar Syrup; Jaggery",ACTIVE_EDGE_DEPLOYED,450,90,90
+turmeric,Turmeric,SPICES,"Metanil Yellow Dye; Lead Chromate; Chalk Powder",ACTIVE_EDGE_DEPLOYED,600,120,120
+chilli_powder,Chilli Powder,SPICES,"Sudan Red Dye; Brick Powder; Rhodamine B",ACTIVE_EDGE_DEPLOYED,550,110,110
+black_pepper,Black Pepper,SPICES,"Papaya Seeds; Light Berries",ACTIVE_EDGE_DEPLOYED,400,80,80
+mustard_seeds,Mustard Seeds,SPICES,"Argemone Mexicana Seeds",ACTIVE_EDGE_DEPLOYED,350,70,70
+cooking_oil,Cooking Oil,OTHER_FOODS,"Argemone Oil; Mineral Oil",ACTIVE_EDGE_DEPLOYED,400,80,80
+apple,Apple,FRUITS,"Artificial Wax Coating; Diphenylamine; Rotten Tissue",ACTIVE_EDGE_DEPLOYED,500,100,100
+banana,Banana,FRUITS,"Calcium Carbide Ripening; Ethephon Overdose",ACTIVE_EDGE_DEPLOYED,450,90,90
+tomato,Tomato,VEGETABLES,"Ethephon Ripening; Erythrosine Dye Wash",ACTIVE_EDGE_DEPLOYED,400,80,80
+rice,Rice,GRAINS_AND_CEREALS,"Plastic Polymer Grains; Talc Polish",PLANNED_TRAINING_REQUIRED,500,100,100
+wheat,Wheat,GRAINS_AND_CEREALS,"Ergot Fungus Grains; Chalk Powder",PLANNED_TRAINING_REQUIRED,500,100,100
+chickpeas,Chickpeas,PULSES_AND_LEGUMES,"Toxic Khesari Dal Substitution",PLANNED_TRAINING_REQUIRED,450,90,90
+toor_dal,Toor Dal,PULSES_AND_LEGUMES,"Metanil Yellow Carcinogenic Dye",PLANNED_TRAINING_REQUIRED,500,100,100
+tea_powder,Tea Powder,OTHER_FOODS,"Used Exhausted Leaves; Iron Filings",PLANNED_TRAINING_REQUIRED,400,80,80
+coffee_powder,Coffee Powder,OTHER_FOODS,"Excess Chicory (>50%); Date Seed Powder",PLANNED_TRAINING_REQUIRED,400,80,80

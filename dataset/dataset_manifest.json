@@ -1,0 +1,79 @@
+{
+  "manifest_version": "1.0.0",
+  "project": "NutriScan AI",
+  "generated_at": "2026-10-13T21:30:00Z",
+  "summary": {
+    "total_groups": 6,
+    "total_commodities": 78,
+    "active_edge_supported": 7,
+    "planned_requiring_training_data": 71
+  },
+  "active_edge_supported_classes": [
+    {
+      "id": "milk",
+      "name": "Milk",
+      "group": "OTHER_FOODS",
+      "target_samples_per_split": { "train": 500, "val": 100, "test": 100 },
+      "adulterants_tested": ["Detergent", "Urea", "Starch", "Water dilution"],
+      "model_status": "READY_FOR_DEPLOYMENT"
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "group": "OTHER_FOODS",
+      "target_samples_per_split": { "train": 450, "val": 90, "test": 90 },
+      "adulterants_tested": ["Corn syrup (HFCS)", "Invert sugar syrup", "Molasses"],
+      "model_status": "READY_FOR_DEPLOYMENT"
+    },
+    {
+      "id": "turmeric",
+      "name": "Turmeric",
+      "group": "SPICES",
+      "target_samples_per_split": { "train": 600, "val": 120, "test": 120 },
+      "adulterants_tested": ["Metanil yellow dye", "Lead chromate", "Chalk powder"],
+      "model_status": "READY_FOR_DEPLOYMENT"
+    },
+    {
+      "id": "chilli_powder",
+      "name": "Chilli Powder",
+      "group": "SPICES",
+      "target_samples_per_split": { "train": 550, "val": 110, "test": 110 },
+      "adulterants_tested": ["Sudan Red dye", "Brick powder", "Rhodamine B"],
+      "model_status": "READY_FOR_DEPLOYMENT"
+    },
+    {
+      "id": "black_pepper",
+      "name": "Black Pepper",
+      "group": "SPICES",
+      "target_samples_per_split": { "train": 400, "val": 80, "test": 80 },
+      "adulterants_tested": ["Papaya seeds", "Light berries"],
+      "model_status": "READY_FOR_DEPLOYMENT"
+    },
+    {
+      "id": "mustard_seeds",
+      "name": "Mustard Seeds",
+      "group": "SPICES",
+      "target_samples_per_split": { "train": 350, "val": 70, "test": 70 },
+      "adulterants_tested": ["Argemone mexicana seeds"],
+      "model_status": "READY_FOR_DEPLOYMENT"
+    },
+    {
+      "id": "cooking_oil",
+      "name": "Cooking Oil",
+      "group": "OTHER_FOODS",
+      "target_samples_per_split": { "train": 400, "val": 80, "test": 80 },
+      "adulterants_tested": ["Argemone oil", "Mineral oil"],
+      "model_status": "READY_FOR_DEPLOYMENT"
+    }
+  ],
+  "dataset_specifications": {
+    "input_resolution": "224x224x3 (RGB)",
+    "file_formats_accepted": ["JPEG", "PNG", "WEBP"],
+    "max_file_size_bytes": 15728640,
+    "quality_filters": {
+      "min_laplacian_variance": 45.0,
+      "min_brightness_nits": 30.0,
+      "max_brightness_nits": 240.0
+    }
+  }
+}

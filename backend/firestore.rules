@@ -1,0 +1,27 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Deny all global root reads and writes by default
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Isolated user-level collections
+    // Each user can ONLY read, create, update, and delete their own private scan records
+    match /users/{userId}/scans/{scanId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // User profile metadata
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Public reference data (Central Food Registry and Model Telemetry - Read Only)
+    match /public_registry/{documentId} {
+      allow read: if true;
+      allow write: if false; // Only server admin can modify
+    }
+  }
+}

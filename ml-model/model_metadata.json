@@ -1,0 +1,28 @@
+{
+  "project": "NutriScan AI",
+  "model_name": "MobileNetV3-Small Food Adulteration Edge Classifier",
+  "version": "1.0.0",
+  "framework": "TensorFlow Lite / LiteRT",
+  "quantization_type": "INT8 Full Integer",
+  "input_shape": [1, 224, 224, 3],
+  "input_dtype": "uint8",
+  "output_shape": [1, 7],
+  "output_dtype": "uint8",
+  "normalization": {
+    "mean": 0.0,
+    "std": 255.0
+  },
+  "target_latency_arm_neon_ms": 42.3,
+  "binary_size_bytes": 3397632,
+  "binary_size_mb": 3.24,
+  "active_classes": [
+    "milk",
+    "honey",
+    "turmeric",
+    "chilli_powder",
+    "black_pepper",
+    "mustard_seeds",
+    "cooking_oil"
+  ],
+  "dew_compatibility": "Fully Autonomous Offline Inference (Zero Server Dependency)"
+}

@@ -1,0 +1,81 @@
+# ==============================================================================
+# NutriScan AI - Project Root .gitignore
+# ==============================================================================
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.iml
+
+# Android Build & Local Configuration
+android-app/.gradle/
+android-app/build/
+android-app/*/build/
+android-app/local.properties
+android-app/*.apk
+android-app/*.aab
+
+# Node.js & Web / Backend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+dist/
+build/
+.cache/
+
+# Python & Machine Learning
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.ipynb_checkpoints/
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ML Models & Datasets (Raw data and heavy binaries should not be committed to Git)
+ml-model/checkpoints/
+ml-model/exports/*.tflite
+dataset/raw/*
+!dataset/raw/.gitkeep
+dataset/processed/*
+!dataset/processed/.gitkeep
+
+# Release artifacts (release folder retains structure, but generated binaries excluded from version control)
+Release/apks/*.apk
+Release/source_archive/*.zip
+Release/*.zip
+*.zip
+

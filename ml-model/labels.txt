@@ -1,0 +1,15 @@
+milk
+honey
+turmeric
+chilli_powder
+black_pepper
+mustard_seeds
+cooking_oil
+apple
+banana
+tomato
+orange
+mango
+rice
+wheat
+chickpeas

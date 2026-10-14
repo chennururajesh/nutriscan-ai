@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NutriScan AI</string>
+    <string name="project_title">A Lightweight TinyML-Based Dew Computing Framework for Offline and Low-Latency Food Adulteration Detection</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_scan">Scan</string>
+    <string name="nav_history">History</string>
+    <string name="nav_profile">Profile</string>
+    <string name="btn_take_photo">ALLOW LIVE CAMERA ACCESS</string>
+    <string name="btn_upload_image">UPLOAD IMAGE</string>
+    <string name="disclaimer_text">This AI result is a preliminary visual screening, not a food-safety certification. Normal appearance does not guarantee that food is safe.</string>
+    <string name="camera_permission_rationale">Camera permission is required to optically scan and screen food samples for adulterants in real-time on your device.</string>
+</resources>

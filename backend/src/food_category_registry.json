@@ -1,0 +1,128 @@
+{
+  "version": "1.0.0",
+  "project": "NutriScan AI",
+  "framework": "Dew Computing & TinyML",
+  "active_model": {
+    "id": "nutriscan_tinyml_v1_prototype",
+    "name": "MobileNetV3-Small Food Adulteration Edge Classifier",
+    "quantization": "INT8 Full Integer",
+    "input_resolution": [224, 224, 3],
+    "status": "DEVELOPMENT_BASELINE"
+  },
+  "groups": {
+    "FRUITS": {
+      "displayName": "Fruits",
+      "description": "Fresh and processed whole fruits evaluated for chemical ripening agents (calcium carbide), wax coatings, and external decay.",
+      "items": [
+        { "id": "apple", "name": "Apple", "adulterants": ["Artificial wax coating", "Diphenylamine residues"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "banana", "name": "Banana", "adulterants": ["Calcium carbide ripening", "Ethephon overdose"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "orange", "name": "Orange", "adulterants": ["Color dye injection (Citrus Red No. 2)", "Wax coating"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "mango", "name": "Mango", "adulterants": ["Calcium carbide / Acetylene gas ripening"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "grapes", "name": "Grapes", "adulterants": ["Pesticide residues", "Copper sulfate wash"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "strawberry", "name": "Strawberry", "adulterants": ["Rhodamine B dye", "Artificial color enhancement"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "blueberry", "name": "Blueberry", "adulterants": ["Synthetic dye", "Sulfite preservatives"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "pomegranate", "name": "Pomegranate", "adulterants": ["Red dye injection in seeds", "Extraneous water injection"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "watermelon", "name": "Watermelon", "adulterants": ["Erythrosine red dye injection", "Saccharin sweetener injection"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "pineapple", "name": "Pineapple", "adulterants": ["Sugar syrup soaking", "Calcium carbide ripening"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "papaya", "name": "Papaya", "adulterants": ["Chemical forced ripening", "Waxing"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "guava", "name": "Guava", "adulterants": ["Malachite green dip for surface sheen"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "lemon", "name": "Lemon", "adulterants": ["Mineral oil polishing", "Yellow azo dyes"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "pear", "name": "Pear", "adulterants": ["Industrial wax coating", "Sulfur dioxide fumigation"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "dragon_fruit", "name": "Dragon Fruit", "adulterants": ["Artificial peel color enhancers"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "jackfruit", "name": "Jackfruit", "adulterants": ["Sulfur bleaching of pods"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "coconut", "name": "Coconut", "adulterants": ["Hydrogen peroxide bleaching of shell"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "kiwi", "name": "Kiwi", "adulterants": ["Forced ethylene ripening"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "peach", "name": "Peach", "adulterants": ["Synthetic wax", "Pesticide residues"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "plum", "name": "Plum", "adulterants": ["Artificial color dips"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "avocado", "name": "Avocado", "adulterants": ["Chemical shelf-life extenders"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" }
+      ]
+    },
+    "VEGETABLES": {
+      "displayName": "Vegetables",
+      "description": "Fresh vegetables assessed for hazardous dye baths (malachite green, rhodamine) and heavy metals.",
+      "items": [
+        { "id": "tomato", "name": "Tomato", "adulterants": ["Ethephon forced ripening", "Erythrosine red wash"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "carrot", "name": "Carrot", "adulterants": ["Red lead dye polishing"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "potato", "name": "Potato", "adulterants": ["Solanine toxicity (green spuds)", "Clay coating for weight fraud"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "onion", "name": "Onion", "adulterants": ["Sulfur treatment", "Fungal black mold contamination"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "garlic", "name": "Garlic", "adulterants": ["Chlorine bleaching", "Methyl bromide fumigation"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "spinach", "name": "Spinach", "adulterants": ["Malachite green dye soak", "Excess nitrate run-off"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "broccoli", "name": "Broccoli", "adulterants": ["Green dye freshener bath"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "cabbage", "name": "Cabbage", "adulterants": ["Formaldehyde preservative spraying", "Wax wash"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "cauliflower", "name": "Cauliflower", "adulterants": ["Hydrogen peroxide / sodium bisulfite bleaching"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "cucumber", "name": "Cucumber", "adulterants": ["Copper sulfate / Malachite green wash"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "brinjal", "name": "Brinjal", "adulterants": ["Methyl violet dye dip for shine"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "capsicum", "name": "Capsicum", "adulterants": ["Paraffin wax sheen", "Copper green coloring"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "green_chilli", "name": "Green Chilli", "adulterants": ["Malachite green dye dip"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "beetroot", "name": "Beetroot", "adulterants": ["Synthetic magenta/rhodamine dye injection"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "radish", "name": "Radish", "adulterants": ["Sodium hydrosulfite bleaching"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "pumpkin", "name": "Pumpkin", "adulterants": ["Yellow dye wash", "Lead oxide coloring"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "bitter_gourd", "name": "Bitter Gourd", "adulterants": ["Copper sulfate / Malachite green immersion"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "okra", "name": "Okra", "adulterants": ["Malachite green dye bath for emerald tint"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "sweet_potato", "name": "Sweet Potato", "adulterants": ["Rhodamine B dye wash for deep purple skin"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" }
+      ]
+    },
+    "GRAINS_AND_CEREALS": {
+      "displayName": "Grains and Cereals",
+      "description": "Whole and milled grain staples evaluated for polishing talc, foreign seeds, and dye adulteration.",
+      "items": [
+        { "id": "rice", "name": "Rice", "adulterants": ["Plastic polymer grains", "Talc / Liquid paraffin polishing", "Broken chalk bits"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "wheat", "name": "Wheat", "adulterants": ["Ergot fungus grains", "Weevil dust", "Chalk powder"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "maize", "name": "Maize", "adulterants": ["Aflatoxin fungal rot", "Yellow lead chromate dye"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "oats", "name": "Oats", "adulterants": ["Barley husk dilution", "Industrial talc"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "barley", "name": "Barley", "adulterants": ["Extraneous grit", "Fungicide powder"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "millet", "name": "Millet", "adulterants": ["Sand dilution", "Synthetic brown coloring"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "ragi", "name": "Ragi", "adulterants": ["Coal-tar red dyes", "Fine sand"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "sorghum", "name": "Sorghum", "adulterants": ["Foreign weed seeds", "Powdered chalk"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "quinoa", "name": "Quinoa", "adulterants": ["Broken amaranth seed mixing", "Starch pellets"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" }
+      ]
+    },
+    "PULSES_AND_LEGUMES": {
+      "displayName": "Pulses and Legumes",
+      "description": "High-protein legumes screened for toxic Khesari dal mixing, lead chromate, and industrial dyes.",
+      "items": [
+        { "id": "chickpeas", "name": "Chickpeas", "adulterants": ["Toxic Khesari dal (Lathyrus sativus) substitution"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "green_gram", "name": "Green Gram (Moong)", "adulterants": ["Malachite green dye wash", "Foreign stones"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "black_gram", "name": "Black Gram (Urad)", "adulterants": ["Soapstone polishing", "Talc"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "red_lentils", "name": "Red Lentils (Masoor)", "adulterants": ["Lead chromate dye", "Red earth coloring"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "kidney_beans", "name": "Kidney Beans (Rajma)", "adulterants": ["Metanil yellow & rhodamine dye polishing"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "soybeans", "name": "Soybeans", "adulterants": ["Broken non-edible seed pellets", "Moisture adulteration"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "peas", "name": "Peas", "adulterants": ["Dried green dye (Malachite green) immersion"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "toor_dal", "name": "Toor Dal (Arhar)", "adulterants": ["Metanil yellow carcinogenic dye", "Khesari dal"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" }
+      ]
+    },
+    "SPICES": {
+      "displayName": "Spices",
+      "description": "High-value aromatic spices vulnerable to non-edible seed substitutions and carcinogenic colorings.",
+      "items": [
+        { "id": "turmeric", "name": "Turmeric", "adulterants": ["Metanil yellow industrial dye", "Lead chromate", "Chalk powder", "Starch"], "status": "SUPPORTED_ACTIVE_IN_EDGE_MODEL" },
+        { "id": "chilli_powder", "name": "Chilli Powder", "adulterants": ["Sudan Red dye", "Brick powder", "Rhodamine B", "Sawdust"], "status": "SUPPORTED_ACTIVE_IN_EDGE_MODEL" },
+        { "id": "black_pepper", "name": "Black Pepper", "adulterants": ["Papaya seeds", "Light berries", "Mineral oil sheen"], "status": "SUPPORTED_ACTIVE_IN_EDGE_MODEL" },
+        { "id": "cumin", "name": "Cumin", "adulterants": ["Grass seeds colored with charcoal dust", "Sawdust"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "coriander", "name": "Coriander", "adulterants": ["Dung powder", "Horse feed husk", "Sulfur dioxide fumigation"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "mustard_seeds", "name": "Mustard Seeds", "adulterants": ["Argemone mexicana seeds (toxic)"], "status": "SUPPORTED_ACTIVE_IN_EDGE_MODEL" },
+        { "id": "cardamom", "name": "Cardamom", "adulterants": ["Talcum powder bleaching", "Exhausted cardamom pods coated in green dye"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "cloves", "name": "Cloves", "adulterants": ["Exhausted/distilled cloves soaked in volatile oil"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "cinnamon", "name": "Cinnamon", "adulterants": ["Cassia bark (toxic coumarin) substitution"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "fennel_seeds", "name": "Fennel Seeds", "adulterants": ["Malachite green dye bath", "Exhausted seeds"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "fenugreek", "name": "Fenugreek", "adulterants": ["Extraneous dirt", "Damaged weed seeds"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" }
+      ]
+    },
+    "OTHER_FOODS": {
+      "displayName": "Other Foods",
+      "description": "Essential dairy, sweeteners, and pantry items tested for industrial chemicals and adulterant syrups.",
+      "items": [
+        { "id": "milk", "name": "Milk", "adulterants": ["Detergent", "Urea", "Starch", "Synthetic milk", "Water dilution"], "status": "SUPPORTED_ACTIVE_IN_EDGE_MODEL" },
+        { "id": "honey", "name": "Honey", "adulterants": ["High Fructose Corn Syrup (HFCS)", "Invert sugar syrup", "Jaggery / Molasses"], "status": "SUPPORTED_ACTIVE_IN_EDGE_MODEL" },
+        { "id": "cooking_oil", "name": "Cooking Oil", "adulterants": ["Argemone oil", "Mineral oil", "Cheap palm oil dilution"], "status": "SUPPORTED_ACTIVE_IN_EDGE_MODEL" },
+        { "id": "ghee", "name": "Ghee", "adulterants": ["Hydrogenated vegetable oil (Vanaspati)", "Animal body fat", "Mashed potatoes"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "butter", "name": "Butter", "adulterants": ["Starch", "Margarine substitution", "Excess moisture"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "tea_powder", "name": "Tea Powder", "adulterants": ["Used/exhausted tea leaves colored with coal tar dyes", "Iron filings", "Black sand"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "coffee_powder", "name": "Coffee Powder", "adulterants": ["Chicory overdose (>50%)", "Date seed powder", "Tamarind seed powder"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "sugar", "name": "Sugar", "adulterants": ["Chalk powder", "Washing soda", "Fine urea crystals"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "salt", "name": "Salt", "adulterants": ["Chalk powder", "White stone dust"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" },
+        { "id": "flour", "name": "Flour (Atta / Maida)", "adulterants": ["Chalk powder", "Boric powder", "Potassium bromate bleaching"], "status": "PLANNED_REQUIRES_DATASET_TRAINING" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+# NutriScan AI - TinyML Dew Model Configuration
+model:
+  name: "nutriscan_tinyml_v1"
+  backbone: "MobileNetV3Small"
+  input_shape: [224, 224, 3]
+  alpha: 0.75
+  dropout_rate: 0.2
+  num_classes: 6
+  classes:
+    - "milk_pure"
+    - "milk_adulterated_detergent_urea"
+    - "honey_pure"
+    - "honey_adulterated_syrup"
+    - "turmeric_pure"
+    - "turmeric_adulterated_metanil_yellow"
+
+training:
+  batch_size: 32
+  epochs: 50
+  learning_rate: 0.001
+  optimizer: "adam"
+  loss: "categorical_crossentropy"
+  metrics: ["accuracy", "precision", "recall"]
+  data_augmentation:
+    rotation_range: 20
+    zoom_range: 0.15
+    horizontal_flip: true
+    brightness_range: [0.85, 1.15]
+
+quantization:
+  method: "INT8_FULL_INTEGER"
+  target_hardware: "ARM_NEON_DEW_NODE"
+  representative_dataset_size: 100
+  target_max_size_mb: 3.5
+  target_max_latency_ms: 75.0

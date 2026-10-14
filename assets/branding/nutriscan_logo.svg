@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#006D3A" />
+      <stop offset="100%" stop-color="#1B5E20" />
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4CAF50" />
+      <stop offset="100%" stop-color="#81C784" />
+    </linearGradient>
+  </defs>
+  <!-- Background Shield -->
+  <path d="M100 20 C140 20 170 35 170 80 C170 130 120 165 100 180 C80 165 30 130 30 80 C30 35 60 20 100 20 Z" 
+        fill="url(#shieldGrad)" />
+  
+  <!-- Outer Scanner Reticle Frame -->
+  <path d="M65 60 L50 60 L50 75" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+  <path d="M135 60 L150 60 L150 75" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+  <path d="M50 115 L50 130 L65 130" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+  <path d="M150 115 L150 130 L135 130" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+  
+  <!-- Food Safety Leaf Center -->
+  <path d="M100 55 C125 55 135 75 135 95 C135 125 100 135 100 135 C100 135 65 125 65 95 C65 75 75 55 100 55 Z" 
+        fill="url(#leafGrad)" />
+  <path d="M100 55 C100 85 100 135 100 135" fill="none" stroke="#004D25" stroke-width="3" stroke-linecap="round" />
+  <path d="M100 85 Q115 80 122 75" fill="none" stroke="#004D25" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M100 100 Q85 95 78 90" fill="none" stroke="#004D25" stroke-width="2.5" stroke-linecap="round" />
+  
+  <!-- Optical Scan Line -->
+  <line x1="45" y1="95" x2="155" y2="95" stroke="#E8F5E9" stroke-width="2.5" stroke-dasharray="6,4" opacity="0.85" />
+</svg>
